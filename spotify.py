@@ -15,7 +15,7 @@ auth_response_post_data = auth_response_post.json()
 
 access_token = auth_response_post_data['access_token']
 headers = {
-        'Authorization' : 'Bearer {token}'.format(token=access_token)
+        'Authorization': 'Bearer {token}'.format(token=access_token)
         }
 
 BASE_URL = 'https://api.spotify.com/v1/'
@@ -24,7 +24,8 @@ artist_id = '36QJpDe2go2KgaRleHCDTp'
 
 auth_response_get = requests.get(BASE_URL + 'artists/' + artist_id +
                                  '/albums', headers=headers,
-                                 params={'include_groups' : 'album', 'limit': 1})
+                                 params={'include_groups': 'album',
+                                         'limit': 1})
 
 # convert the response to JSON
 auth_response_get_data = auth_response_get.json()
