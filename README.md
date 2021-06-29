@@ -1,1 +1,1 @@
-[![check_style](https://github.com/cbcobashatse/API_Codes/workflows/check_style.yaml/badge.svg)](https://github.com/cbcobashatse/API_Codes/actions)
+![check_style](https://github.com/cbcobashatse/API_Codes/actions/workflows/check_style.yaml/badge.svg)
