@@ -14,5 +14,5 @@ print(f'Recovered : {country_data["recovered"]}')
 print(f'Deaths : {country_data["deaths"]}')
 print(f'Total Population : {country_data["population"]}')
 
-#Not every country has this value
-#print(f'Last updated at {country_data["updated"]}')
+# Not every country has this value
+# print(f'Last updated at {country_data["updated"]}')
