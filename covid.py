@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 # the base URL to be used
 base_url = 'https://covid-api.mmediagroup.fr/v1'
 
+
 # test 1: check that the user input is not empty and is a valid country
 def get_user_input():
     # ask the user for input
