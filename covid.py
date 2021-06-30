@@ -31,15 +31,15 @@ print(f'Total Population : {population}')
 # creating data frame from the dictionary obtained
 col_names = ['Country', 'Confirmed', 'Recovered', 'Deaths', 'Population']
 country_data_df = pd.DataFrame(columns=col_names)
-country_data_df.loc[len(country_data_df.index)] = [country, confirmed, 
-                                                   recovered, deaths, 
+country_data_df.loc[len(country_data_df.index)] = [country, confirmed,
+                                                   recovered, deaths,
                                                    population]
 
 # Create an engine
 engine = create_engine('mysql://root:codio@localhost/covid')
 
 # Create and send SQLtable from my dataframe
-country_data_df.to_sql('by_country', con=engine, if_exists='replace', 
+country_data_df.to_sql('by_country', con=engine, if_exists='replace',
                        index=False)
 
 # Not every country has this value
