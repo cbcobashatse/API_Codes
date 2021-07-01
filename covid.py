@@ -11,27 +11,30 @@ base_url = 'https://covid-api.mmediagroup.fr/v1'
 def get_user_input():
     # ask the user for input
     user_country = input('Enter a country: ')
+    return user_country
 
 
 # test 2: check that the status code is 200
 # test 3: check that the file obtained is in JSON
 # test 4: check that we got a dictionary from the JSON file
 # test 5: check that we got a dictionary for "All" covid cases
-def get_data_from_api():
+def get_data_from_api(base_url, user_country):
     # get the data from the API
     response = requests.get(base_url + '/cases?country=' + user_country)
     response_json = response.json()
     country_data = response_json['All']
+    return response, response_json, country_data
 
 
 # test 6: check that country is a string and the others are integers
-def get_data_items():
+def get_data_items(country_data):
     # data items to be used
     country = country_data["country"]
     confirmed = country_data["confirmed"]
     recovered = country_data["recovered"]
     deaths = country_data["deaths"]
     population = country_data["population"]
+    return country, confirmed, recovered, deaths, population
 
 
 # not sure what checks to use
