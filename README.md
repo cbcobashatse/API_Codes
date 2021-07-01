@@ -14,8 +14,7 @@ and every time new changes are pushed to the [GitHub repo](https://github.com/cb
 This repo also contains a folder with old code that was used in the learning of the use of APIs.
 
 ## Developer Info
-Name: Chris Berniel Cobashatse
-Email address: cc4536@columbia.edu
+Name: Chris Berniel Cobashatse | Email address: cc4536@columbia.edu
 
 ## Actions upon a push to GitHub
 ![check_style](https://github.com/cbcobashatse/API_Codes/actions/workflows/check_style.yaml/badge.svg)
