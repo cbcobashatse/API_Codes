@@ -2,8 +2,8 @@ import unittest
 from covid import get_user_input, get_data_from_api, get_data_items
 from covid import print_data, dict_to_df, engine_and_SQLtable
 
-class covid_test(unittest.TestCase):
 
+class covid_test(unittest.TestCase):
 
     # Later include test to check if input is a valid country
     def test_get_user_input(self):
