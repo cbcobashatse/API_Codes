@@ -10,7 +10,6 @@ class covid_test(unittest.TestCase):
         print()
         self.assertNotEqual(get_user_input(), "")
 
-
     # Not sure how to check if data from api is in JSON format
     def test_get_data_from_api(self):
         base_url = 'https://covid-api.mmediagroup.fr/v1'
@@ -22,7 +21,6 @@ class covid_test(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(type(response_json), type({}))
         self.assertEqual(type(country_data), type({}))
-
 
     def test_get_data_items(self):
         base_url = 'https://covid-api.mmediagroup.fr/v1'
