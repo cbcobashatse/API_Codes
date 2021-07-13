@@ -119,7 +119,8 @@ def load_database(dbName, fileName):
 
 '''
 def choose_action():
-    action = input("Choose an action (e for existing data and o for overwrite): ")
+    action = input("Choose an action
+    (e for existing data and o for overwrite): ")
     if (action == 'e'):
         print("Existing data")
         load_SQL_from_file()
