@@ -19,7 +19,7 @@ def get_user_input():
 def get_data_from_api(base_url, user_country):
     # get the data from the API
     # the base URL to be used
-    
+
     response = requests.get(base_url + '/cases?country=' + user_country)
     response_json = response.json()
     country_data = response_json['All']
@@ -51,6 +51,7 @@ def put_values_dataframe(dataframe, values):
     dataframe.loc[len(dataframe.index)] = values
     return dataframe
 
+
 '''
 def loadNewData(df):
     #get data corresponding to country input by user
@@ -66,6 +67,7 @@ def loadNewData(df):
     #save_SQL_to_file()
 '''
 
+
 # test 10: check that the engine has been created
 def create_engine_function(dbName):
     # Create an engine
@@ -75,13 +77,13 @@ def create_engine_function(dbName):
 
 
 # test 11: check that the SQL table has been created
-## def create_SQLtable(dtfr, dbName, tableName):
+# !def create_SQLtable(dtfr, dbName, tableName):
     # Create and send SQLtable from my dataframe
     # with dataframe = country_data_df
-##     os.system('mysql -u root -pcodio -e\
-##               "CREATE DATABASE IF NOT EXISTS ' + dbName + ';"')
-##     dtfr.to_sql(tableName, con=create_engine_function(dbName),
-##                 if_exists='replace', index=False)
+#     !os.system('mysql -u root -pcodio -e\
+#               !"CREATE DATABASE IF NOT EXISTS ' + dbName + ';"')
+#     !dtfr.to_sql(tableName, con=create_engine_function(dbName),
+#                 !if_exists='replace', index=False)
     # SQLtable = dataframe.to_sql('by_country', con=engine,
     #                             if_exists='replace', index=False)
     # return SQLtable
@@ -97,6 +99,7 @@ def loadDataset(update):
         return df
 '''
 
+
 def save_data_to_file(dtfr, dbName, tableName, fileName):
     # os.system("mysqldump -u root -pcodio covid > covid_data.sql")
     dtfr.to_sql(tableName, con=create_engine_function(dbName),
@@ -106,7 +109,8 @@ def save_data_to_file(dtfr, dbName, tableName, fileName):
 
 
 def load_database(dbName, fileName):
-    # os.system('mysql -u root -pcodio -e "CREATE DATABASE IF NOT EXISTS covid_data.sql;"')
+    # os.system('mysql -u root -pcodio -e
+    # "CREATE DATABASE IF NOT EXISTS covid_data.sql;"')
     # os.system("mysql -u root -pcodio covid < covid_data.sql")
     os.system('mysql -u root -pcodio -e "CREATE DATABASE IF NOT EXISTS '
               + dbName + '; "')
@@ -135,12 +139,14 @@ def choose_action():
         #save_SQL_to_file()
 '''
 
+
 def check_database_input(country, dataframe):
     result = dataframe[dataframe['Country'] == country]
     return (len(result.index) != 0), result
-        
+
 
 # choose_action()
+
 
 def main():
     # defining some terms

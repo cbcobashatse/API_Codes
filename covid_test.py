@@ -11,9 +11,9 @@ class covid_test(unittest.TestCase):
     def test_get_user_input(self, input):
         print()
         self.assertNotEqual(get_user_input(), "")
-    #def test_get_user_input(self):
-        #print()
-        #self.assertNotEqual(get_user_input(), "")
+    # def test_get_user_input(self):
+        # print()
+        # self.assertNotEqual(get_user_input(), "")
 
     # Not sure how to check if data from api is in JSON format
     def test_get_data_from_api(self):
