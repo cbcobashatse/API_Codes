@@ -16,10 +16,10 @@ def get_user_input():
 # test 3: check that the file obtained is in JSON
 # test 4: check that we got a dictionary from the JSON file
 # test 5: check that we got a dictionary for "All" covid cases
-def get_data_from_api(user_country):
+def get_data_from_api(base_url, user_country):
     # get the data from the API
     # the base URL to be used
-    base_url = 'https://covid-api.mmediagroup.fr/v1'
+    
     response = requests.get(base_url + '/cases?country=' + user_country)
     response_json = response.json()
     country_data = response_json['All']
@@ -148,6 +148,8 @@ def main():
     fileName = 'covid_data'
     dbName = 'covid'
 
+    base_url = 'https://covid-api.mmediagroup.fr/v1'
+
     user_country = get_user_input()
     load_database(dbName, fileName)
     dtfr_initial = pd.read_sql_table(tableName,
@@ -157,7 +159,7 @@ def main():
     if is_in_db[0]:
         print(is_in_db[1])
     else:
-        data = get_data_from_api(user_country)[2]
+        data = get_data_from_api(base_url, user_country)[2]
         values = get_data_items(data)
 
         # creating a new dataframe/database/SQL file
