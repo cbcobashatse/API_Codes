@@ -1,7 +1,6 @@
 import unittest
 from unittest.mock import patch
 from covid import get_user_input, get_data_from_api, get_data_items
-from covid import print_data, dict_to_df, engine_and_SQLtable
 
 
 class covid_test(unittest.TestCase):
