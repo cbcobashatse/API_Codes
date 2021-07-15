@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import requests, os
+import requests
+import os
 import pandas as pd
 import sqlalchemy
 from sqlalchemy import create_engine
