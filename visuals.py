@@ -35,6 +35,14 @@ def barplot(x_column_name, y_column_name):
     fig.write_html('figure.html')  # export to HTML file
 
 
+def statistics(dataframe):
+    print(dataframe.head())
+    print(dataframe["Confirmed"].mean())
+    print(dataframe[["Confirmed", "Recovered"]].median())
+    print(dataframe[["Confirmed", "Recovered"]].describe())
+    print(dataframe[["Country", "Confirmed"]].groupby("Country").mean())
+
+
 def main():
     # defining some terms
     tableName = 'by_country'
@@ -48,6 +56,7 @@ def main():
     # histogram(dataframe, 'Deaths')
     # boxplot(dataframe, 'Confirmed')
     barplot(dataframe['Country'], dataframe['Population'])
+    statistics(dataframe)
 
 
 if __name__ == "__main__":
