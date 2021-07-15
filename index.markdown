@@ -1,4 +1,9 @@
-Hello you!
-
-This is a small program I designed to tell the user the covid situation in a specific
-country that they input.
+<iframe
+  id="igraph"
+  scrolling="no"
+  style="border:none;"
+  seamless="seamless"
+  src="https://cbcobashatse.github.io/API_Codes/figure.html"
+  height="525"
+  width="100%">
+</iframe>
