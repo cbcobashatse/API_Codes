@@ -17,8 +17,8 @@ This repo also contains a folder with old code that was used in the learning of 
 Name: Chris Berniel Cobashatse | Email address: cc4536@columbia.edu
 
 ## Actions upon a push to GitHub
-![check_style](https://github.com/cbcobashatse/API_Codes/actions/workflows/check_style.yaml/badge.svg)
-![unittest](https://github.com/cbcobashatse/API_Codes/actions/workflows/unittest.yaml/badge.svg)
+![Continuous Integration Workflows](https://github.com/cbcobashatse/API_Codes/actions/workflows/ci_pipeline.yaml/badge.svg)
+![Code Coverage](https://github.com/cbcobashatse/API_Codes/actions/workflows/coverage.yaml/badge.svg)
 
 ## License
 [Click here for the license](license)
